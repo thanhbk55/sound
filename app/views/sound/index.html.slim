@@ -1,0 +1,15 @@
+javascript:
+  $(document).on("click", "#demo_play", function(){
+    text = $("#demo_text").val();
+    msg = new SpeechSynthesisUtterance(text);
+    msg.lang = "ja-JP";
+    window.speechSynthesis.speak(msg);
+  })
+h1 Test sound
+
+div
+  label Language: ja-JP
+  div
+    label Text:
+    textarea#demo_text rows="5" cols="60"
+    button#demo_play Play!
