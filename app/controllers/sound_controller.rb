@@ -1,4 +1,8 @@
 class SoundController < ApplicationController
-  def index
+  def show
+  end
+
+  def send_message
+    MessageBroadcastJob.perform_now params["message"]
   end
 end
